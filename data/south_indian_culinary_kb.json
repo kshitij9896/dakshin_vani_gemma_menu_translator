@@ -1,0 +1,679 @@
+{
+  "restaurant_profile": {
+    "name": "Dakshin Vani — Authentic South Indian Tiffin & Heritage Kitchen",
+    "primary_target_language": "hi",
+    "supported_languages": [
+      "hi",
+      "mr",
+      "fr",
+      "ja",
+      "de"
+    ],
+    "model_backbone": "gemma3:4b (via Ollama local inference)",
+    "agent_architecture": "3-Stage Culinary RAG & Cultural Equivalence Agent"
+  },
+  "culinary_glossary": {
+    "podi": {
+      "literal_trap": "Powder / Dust",
+      "authentic_meaning": "Coarsely stone-ground roasted lentil, sesame, dry red chili, and asafoetida spice condiment ('Gunpowder')",
+      "allergens": [
+        "Sesame",
+        "Legumes"
+      ]
+    },
+    "bath": {
+      "literal_trap": "Bath / Washing",
+      "authentic_meaning": "Kannada culinary term ('Huli Anna') for a slow-simmered, spiced one-pot rice and lentil dish",
+      "allergens": [
+        "Ghee (Dairy)",
+        "Tree Nuts (Cashew)",
+        "Mustard"
+      ]
+    },
+    "kuzhi": {
+      "literal_trap": "Pit / Hole / Trench",
+      "authentic_meaning": "Spherical dimpled cast-iron griddle mold ('paniyaram kal') that crisps fermented batter into golden dumplings",
+      "allergens": [
+        "Mustard"
+      ]
+    },
+    "degree": {
+      "literal_trap": "Academic Degree / Temperature Degree",
+      "authentic_meaning": "Heritage Kumbakonam standard for pure, unadulterated full-cream cow's milk verified with a lactometer, brewed with 80:20 Arabica/Peaberry & chicory decoction",
+      "allergens": [
+        "Milk (Dairy)"
+      ]
+    },
+    "medu": {
+      "literal_trap": "Soft Cake",
+      "authentic_meaning": "Kannada term for 'soft', referring to the airy, whipped black-gram (urad dal) interior contrasted with a crackling golden fried crust",
+      "allergens": [
+        "Mustard",
+        "Legumes"
+      ]
+    },
+    "rasam": {
+      "literal_trap": "Juice",
+      "authentic_meaning": "Aromatic South Indian digestive consommé brewed with tamarind extract, crushed Tellicherry black pepper, cumin, garlic, and curry leaves",
+      "allergens": [
+        "Mustard"
+      ]
+    },
+    "pesarattu": {
+      "literal_trap": "Green bean pancake",
+      "authentic_meaning": "Andhra Pradesh savory crepe ground from whole sprouted green gram (moong dal) without fermentation, high in protein and crisp on the edges",
+      "allergens": [
+        "Gluten (when stuffed with Rava Upma)"
+      ]
+    },
+    "parotta": {
+      "literal_trap": "Flatbread",
+      "authentic_meaning": "Malabar layered ribbon pastry stretched paper-thin by hand ('veechu' technique), coiled, and griddled until flaky",
+      "allergens": [
+        "Gluten (Wheat)",
+        "Ghee (Dairy)"
+      ]
+    }
+  },
+  "dishes": [
+    {
+      "id": "ghee-roast-podi-masala-dosa",
+      "name": "Ghee Roast Podi Masala Dosa",
+      "native_script": "நெய் பொடி மசாலா தோசை / ತುಪ್ಪದ பொಡಿ ಮಸಾಲೆ ದೋಸೆ",
+      "region": "Tamil Nadu & Karnataka (Udupi-Chennai Tiffin Tradition)",
+      "price_inr": 180,
+      "spice_level": "Medium-High",
+      "dietary": [
+        "Vegetarian",
+        "Gluten-Free (Note: Asafoetida is pure compounded-free)"
+      ],
+      "allergens": [
+        "Dairy (A2 Cow Ghee)",
+        "Sesame (in Podi)",
+        "Mustard Seeds"
+      ],
+      "ingredients": [
+        "Fermented rice & urad dal batter",
+        "Desi cow ghee",
+        "Milagai podi (roasted chana/urad lentil & red chili spice blend)",
+        "Spiced potato-onion palya",
+        "Curry leaves",
+        "Mustard seeds"
+      ],
+      "cooking_technique": "24-hour naturally fermented stone-ground rice-lentil batter spread paper-thin on a seasoned cast-iron tawa, basted with aromatic cow ghee, dusted with fiery roasted lentil 'gunpowder' (Milagai Podi), and folded around turmeric-tempered potato mash.",
+      "how_to_eat": "Tear off a crisp piece by hand, scoop a bit of potato masala inside, and dip into cool coconut chutney followed by piping hot drumstick sambar.",
+      "generic_trap_reason": "Generic translators render 'Podi' as 'Powder/Dust' ('Clarified Butter Roasted Powder Crepe'), making the signature roasted lentil-chili spice condiment sound unappetizing and chemical.",
+      "translations": {
+        "hi": {
+          "generic_title": "घी रोस्ट पाउडर मसाला डोसा (Ghee Roast Powder Masala Dosa)",
+          "generic_desc": "स्पष्ट मक्खन भुना हुआ पाउडर मसाला पैनकेक आलू भरने के साथ।",
+          "agent_title": "देसी घी रोस्ट मिलगई पोडी मसाला डोसा",
+          "agent_subtitle": "भुनी दाल और लाल मिर्च के पारंपरिक 'गनपाउडर' मसाले व शुद्ध देसी घी में सिका कुरकुरा डोसा",
+          "agent_desc": "24 घंटे खमीर उठाए गए चावल और उड़द दाल के घोल से तवे पर सुनहरा और कागज़ जैसा कुरकुरा सिका हुआ डोसा। इसके भीतर देसी घी और भुनी चना-उड़द दाल व सूखी लाल मिर्च के दरदरे 'पोडी' (गनपाउडर) मसाले की परत लगाई जाती है, और बीच में राई-कड़ी पत्ते के तड़के वाला स्वादिष्ट आलू मसाला भरा जाता है।",
+          "cultural_note": "उत्तर भारतीय मेहमानों के लिए: 'पोडी' कोई साधारण पाउडर नहीं बल्कि भुनी दालों, तिल और मिर्च की खुशबूदार चटनी जैसा सूखा मसाला है। इसे ताज़ी नारियल चटनी और टिफ़िन सांभर के साथ परोसा जाता है।",
+          "pronunciation": "घी रोस्ट पो-डी म-सा-ला डो-सा"
+        },
+        "mr": {
+          "generic_title": "तूप रोस्ट पावडर मसाला डोसा",
+          "generic_desc": "साजूक तुपात भाजलेला पावडर मसाला पॅनकेक बटाट्याच्या भाजीसोबत.",
+          "agent_title": "साजूक तूप रोस्ट पोडी (चटणी) मसाला डोसा",
+          "agent_subtitle": "खमंग भाजलेल्या डाळींची 'पोडी' चटणी आणि शुद्ध तुपात खरपूस भाजलेला मसाला डोसा",
+          "agent_desc": "तांदूळ आणि उडीद डाळीच्या आंबवलेल्या पिठापासून बनवलेला, साजूक तुपात सोन्यासारखा कुरकुरीत भाजलेला डोसा. यात आतून खमंग भाजलेली हरभरा-उडीद डाळ, तीळ आणि लाल मिरचीची पारंपरिक दाक्षिणात्य 'पोडी' (कूट चटणी) पसरवून, मोहरी-कढीपत्त्याची फोडणी दिलेल्या बटाट्याच्या भाजीचे स्टफिंग केले जाते.",
+          "cultural_note": "महाराष्ट्रीयन खवय्यांसाठी: ज्याप्रमाणे आपण खमंग शेंगदाणा-लसूण चटणी वापरतो, तशीच ही दाक्षिणात्य 'पोडी' डाळींची खमंग पूड आहे. खोबऱ्याची चटणी आणि गरमागरम सांबारासोबत आस्वाद घ्या.",
+          "pronunciation": "घी रोस्ट पो-डी म-सा-ला डो-सा"
+        },
+        "fr": {
+          "generic_title": "Crêpe rôtie au beurre clarifié et à la poudre épicée",
+          "generic_desc": "Crêpe de riz rôtie avec de la poudre et une garniture de pommes de terre.",
+          "agent_title": "Dosa Croustillant au Ghee, Podi Torréfié & Pommes de Terre Épicées",
+          "agent_subtitle": "Fine galette dentelle de riz et lentilles fermentées, dorée au beurre clarifié et relevée au condiment 'Gunpowder'",
+          "agent_desc": "Semblable à une galette de sarrasin bretonne ultra-fine et croustillante, ce dosa est préparé à partir d'une pâte de riz et de lentilles noires fermentée 24 heures. Il est généreusement badigeonné de ghee (beurre clarifié noisette), saupoudré de 'Milagai Podi' — un condiment artisanal de lentilles torréfiées, sésame et piments séchés — et garni d'un écrasé de pommes de terre parfumé aux feuilles de cari et graines de moutarde.",
+          "cultural_note": "Conseil de dégustation : Rompez un morceau croustillant du bout des doigts et trempez-le dans le chutney de noix de coco fraîche et le bouillon sambar au tamarin.",
+          "pronunciation": "Ghi Rôst Po-di Ma-sa-la Do-sa"
+        },
+        "ja": {
+          "generic_title": "ギーロースト・パウダー・マサラ・ドーサ",
+          "generic_desc": "澄ましバターで焼いた粉入りスパイシーパンケーキ、ジャガイモ詰め。",
+          "agent_title": "芳醇ギーと焙煎スパイス「ポディ」のクリスピー・マサラドーサ",
+          "agent_subtitle": "発酵米と豆の極薄パリパリクレープ・香ばしい焙煎豆七味（ポディ）とスパイスポテト包み",
+          "agent_desc": "24時間自然発酵させた米と黒緑豆（ウラド豆）の生地を鉄板で黄金色に薄く焼き上げた、南インド伝統のパリパリ食感クレープ。芳醇な澄ましバター（ギー）を塗り、焙煎した豆・胡麻・赤唐辛子を石臼で挽いた南インドの旨味ふりかけ「ポディ（別名ガンパウダー）」をまぶし、カレーリーフとマスタードシードが香るホクホクのスパイスポテトを包みました。",
+          "cultural_note": "お召し上がり方：手でパリッとちぎり、爽やかなココナッツチャツネとタマリンド風味の豆野菜スープ（サンバル）に浸してお楽しみください。",
+          "pronunciation": "ギー・ロースト・ポディ・マサラ・ドーサ"
+        },
+        "de": {
+          "generic_title": "Ghee-Braten-Pulver-Masala-Pfannkuchen",
+          "generic_desc": "In Butterschmalz gebratener Pulver-Pfannkuchen mit Kartoffelfüllung.",
+          "agent_title": "Knuspriger Ghee-Roast Dosa mit geröstetem Podi-Gewürz & Kartoffel-Masala",
+          "agent_subtitle": "Hauchdünner, fermentierter Reis-Linsen-Crêpe, in Nussbutter gebacken mit würzigem Linsen-Chili-Crunch",
+          "agent_desc": "Ein goldbrauner, hauchdünner Knusper-Crêpe aus 24 Stunden natürlich fermentiertem Reis- und Urad-Linsenteig. Auf der Gusseisenplatte mit aromatischem Ghee (geklärter Butter) geröstet, im Inneren mit 'Milagai Podi' — einem kräftigen Hausgewürz aus gerösteten Linsen, Sesam und roten Chilis — bestrichen und mit einer mild-würzigen Kartoffel-Zwiebel-Füllung samt Curryblättern und Senfsaat serviert.",
+          "cultural_note": "Genuss-Tipp: Brechen Sie ein knuspriges Stück mit der Hand ab und dippen Sie es abwechselnd in das kühle Kokos-Chutney und den fruchtig-würzigen Tamarinden-Sambar.",
+          "pronunciation": "Ghie Rohst Po-di Ma-sa-la Do-sa"
+        }
+      }
+    },
+    {
+      "id": "medu-vada-tiffin-sambar",
+      "name": "Medu Vada with Udupi Tiffin Sambar",
+      "native_script": "மெது வடை சாம்பார் / ಮೆದು ವಡೆ ಸಾಂಬಾರ್",
+      "region": "Karnataka & Tamil Nadu (Classic Tiffin House)",
+      "price_inr": 120,
+      "spice_level": "Mild-Medium",
+      "dietary": [
+        "Vegetarian",
+        "Vegan",
+        "Gluten-Free"
+      ],
+      "allergens": [
+        "Mustard Seeds",
+        "Legumes (Black Gram & Pigeon Pea)"
+      ],
+      "ingredients": [
+        "Stone-ground black gram (urad dal)",
+        "Crushed Tellicherry black pepper",
+        "Fresh ginger",
+        "Curry leaves",
+        "Green chilies",
+        "Toor dal sambar with drumstick, shallots & jaggery hint"
+      ],
+      "cooking_technique": "Black gram lentils soaked and stone-ground with ice water until aerated like a soufflé, seasoned with whole black peppercorns, ginger, and curry leaves, shaped into rings by hand, and fried until crisp outside and pillow-soft inside.",
+      "how_to_eat": "Enjoy one vada crisp on the side with coconut chutney, and let the second vada soak in the warm, slightly tangy-sweet Udupi sambar topped with chopped cilantro and raw onions.",
+      "generic_trap_reason": "Generic tools translate 'Medu Vada' as 'Soft Cake' or 'Lentil Donut', misleading diners into expecting a sweet bakery pastry or soggy cake instead of a crackling savory lentil fritter.",
+      "translations": {
+        "hi": {
+          "generic_title": "मेदु वड़ा (सॉफ्ट दाल केक) सांभर के साथ",
+          "generic_desc": "दाल से बना मुलायम केक और सब्ज़ी का सूप।",
+          "agent_title": "कुरकुरा मेदु वड़ा और उडुपी टिफ़िन सांभर",
+          "agent_subtitle": "बाहर से करारा और अंदर से रुई जैसा मुलायम उड़द दाल वड़ा, पारंपरिक सहजन-इमली सांभर के साथ",
+          "agent_desc": "पत्थर पर पीसी गई धुली उड़द दाल के फेंटे हुए घोल में कुटी काली मिर्च, अदरक, हरी मिर्च और ताज़े कड़ी पत्ते मिलाकर बनाया गया पारंपरिक दक्षिण भारतीय वड़ा। बाहर से सुनहरा और कुरकुरा तथा अंदर से बेहद नरम ('मेदु') यह वड़ा, गुड़ की हल्की मिठास और इमली की खटास वाले खुशबूदार उडुपी टिफ़िन सांभर व नारियल चटनी के साथ परोसा जाता है।",
+          "cultural_note": "खाने का पारंपरिक तरीका: एक वड़ा कुरकुरा नारियल चटनी के साथ चखें और दूसरे को गरमागरम सांभर में भिगोकर (सांभर-वड़ा डिश की तरह) उसका रसदार स्वाद लें।",
+          "pronunciation": "मे-दु व-ड़ा टि-फ़िन सां-भर"
+        },
+        "mr": {
+          "generic_title": "मऊ डाळीचा केक आणि सांबार",
+          "generic_desc": "उडीद डाळीचा मऊ केक आणि भाजीचे सूप.",
+          "agent_title": "कुरकुरीत मेदू वडा आणि उडुपी टिफिन सांबार",
+          "agent_subtitle": "बाहेरून कुरकुरीत व आतून कापसासारखा मऊसूत उडीद वडा, अस्सल उडुपी सांबार व खोबऱ्याच्या चटणीसह",
+          "agent_desc": "उडीद डाळ वाटून आणि हलकी होईपर्यंत फेटून त्यात काळी मिरी, आले, हिरवी मिरची आणि कढीपत्ता घालून तळलेला अस्सल दाक्षिणात्य मेदू वडा. कन्नड भाषेत 'मेदू' म्हणजे मऊ — हा वडा बाहेरून खुसखुशीत आणि आतून अत्यंत मऊ असतो. शेवग्याच्या शेंगा, चिंच आणि गुळाची हलकी चव असलेल्या उडुपी सांबारासोबत सर्व्ह केला जातो.",
+          "cultural_note": "खाण्याची खास पद्धत: गरमागरम सांबारात बुडवलेला वडा आणि त्यावर बारीक चिरलेला कांदा व कोथिंबीर याची चव अप्रतिम लागते.",
+          "pronunciation": "मे-दू व-डा टि-फिन सां-बार"
+        },
+        "fr": {
+          "generic_title": "Gâteau mou aux lentilles avec soupe Sambar",
+          "generic_desc": "Gâteau frit mou aux lentilles noires servi avec une soupe de légumes.",
+          "agent_title": "Medu Vada — Beignets Salés Crousti-Moelleux aux Lentilles & Sambar Udupi",
+          "agent_subtitle": "Anneaux dorés de lentilles noires fouettées au poivre de Tellicherry, servis avec un velouté de lentilles au tamarin",
+          "agent_desc": "Loin d'un gâteau sucré, le Medu Vada est le grand classique du petit-déjeuner sud-indien : un beignet salé en forme d'anneau, préparé à partir d'une pâte de lentilles noires (urad dal) longuement aérée à la meule de pierre et parfumée au gingembre frais, grains de poivre noir et feuilles de cari. Sa croûte dorée et croquante révèle un cœur aérien. Servi avec notre Sambar Udupi mijoté aux légumes et au tamarin.",
+          "cultural_note": "Conseil de dégustation : Dégustez le premier beignet bien croustillant avec le chutney de coco, et laissez le second s'imbiber du bouillon sambar chaud.",
+          "pronunciation": "Mé-dou Va-da"
+        },
+        "ja": {
+          "generic_title": "柔らかい豆のケーキとサンバルスープ",
+          "generic_desc": "黒い豆で作った柔らかい揚げケーキと野菜スープ。",
+          "agent_title": "メドゥ・ワダ（甘くないサクふわ黒緑豆リング揚げ）＆伝統ウドゥピ・サンバル",
+          "agent_subtitle": "外はカリッと中はふんわり！黒胡椒と生姜が香る南インドの塩味ドーナツと豆野菜スープ",
+          "agent_desc": "「メドゥ＝柔らかい」の名を持つ、南インド定番の甘くないセイボリー（塩味）フリッター。石臼で空気を含ませながら挽いたウラド豆（黒緑豆）の生地に、粗挽き黒胡椒、生姜、カレーリーフを練り込み、外はサクサク・中は飛竜頭（がんもどき）のようにふんわり軽く揚げました。タマリンドの酸味とほんのりジャガリー（黒糖）のコクが効いたウドゥピ風サンバルとココナッツチャツネを添えて。",
+          "cultural_note": "お召し上がり方：1つは揚げたてのサクサク感をチャツネで、もう1つは熱々のサンバルに浸してジュワッと染み込んだ旨味をお楽しみください。",
+          "pronunciation": "メドゥ・ワダ"
+        },
+        "de": {
+          "generic_title": "Weicher Linsenkuchen mit Sambar-Suppe",
+          "generic_desc": "Weicher frittierter Kuchen aus schwarzen Linsen mit Gemüsesuppe.",
+          "agent_title": "Medu Vada — Knusprige Herzhafte Linsenringe mit Udupi Tiffin Sambar",
+          "agent_subtitle": "Außen kross, innen luftig-weich: Pikant gewürzte Urad-Linsen-Krapfen mit Tamarinden-Linseneintopf",
+          "agent_desc": "Kein süßer Kuchen, sondern eine herzhafte Spezialität Südindiens: Luftig aufgeschlagener Teig aus geschälten Urad-Linsen, verfeinert mit ganzem schwarzen Pfeffer, frischem Ingwer und Curryblättern. Zu Ringen geformt und goldbraun ausgebacken, verbindet Medu Vada eine knusprige Kruste mit einer souffléartig weichen Krume. Serviert mit aromatischem Udupi-Sambar und frischem Kokos-Chutney.",
+          "cultural_note": "Genuss-Tipp: Genießen Sie einen Ring knusprig mit Kokos-Chutney und tauchen Sie den zweiten ganz in den heißen Sambar-Eintopf ein.",
+          "pronunciation": "Me-du Wa-da"
+        }
+      }
+    },
+    {
+      "id": "bisi-bele-bath",
+      "name": "Mysuru Bisi Bele Bath with Kara Boondi",
+      "native_script": "ಮೈಸೂರು ಬಿಸಿ ಬೇಳೆ ಬಾತ್",
+      "region": "Karnataka (Mysuru Royal & Bengaluru Darshini Tradition)",
+      "price_inr": 160,
+      "spice_level": "Medium",
+      "dietary": [
+        "Vegetarian"
+      ],
+      "allergens": [
+        "Dairy (Ghee)",
+        "Tree Nuts (Cashews & Peanuts)",
+        "Mustard Seeds",
+        "Sesame/Coconut"
+      ],
+      "ingredients": [
+        "Short-grain Sona Masoori rice",
+        "Toor dal (pigeon peas)",
+        "Marathi moggu (kapok buds)",
+        "Byadgi red chilies",
+        "Tamarind extract",
+        "Garden vegetables",
+        "Ghee-roasted cashews",
+        "Crispy gram-flour kara boondi"
+      ],
+      "cooking_technique": "Slow-simmered one-pot Karnataka specialty where rice, lentils, and vegetables meld with tangy tamarind and a freshly roasted 18-spice Mysuru masala featuring rare kapok buds (Marathi Moggu), finished with Desi ghee, golden cashews, and crunchy spiced boondi pearls.",
+      "how_to_eat": "Eat piping hot right away while the Kara Boondi on top stays crunchy against the velvety, risotto-like spiced rice.",
+      "generic_trap_reason": "Generic translators notoriously translate 'Bisi Bele Bath' word-for-word as 'Hot Lentil Bath', making diners think of bathwater rather than Karnataka's signature spiced risotto-style comfort bowl!",
+      "translations": {
+        "hi": {
+          "generic_title": "गर्म दाल स्नान (Hot Lentil Bath)",
+          "generic_desc": "मसालों और सब्जियों के साथ गर्म दाल और चावल का स्नान।",
+          "agent_title": "मैसूरु बिसी बेले भात (कारा बूंदी और काजू तड़के के साथ)",
+          "agent_subtitle": "कर्नाटक का प्रसिद्ध 18-मसालों, इमली और देसी घी में पका मखमली दाल-चावल व्यंजन",
+          "agent_desc": "कन्नड़ में 'बिसी बेले भात' का अर्थ है 'गरमागरम दाल-चावल' (यहाँ 'भात' का अर्थ पके हुए चावल से है)। तुअर दाल, सोना मसूरी चावल और ताज़ी सब्जियों को इमली के रस और 18 भुने मसालों (जिसमें खास 'मराठी मोग्गू' और ब्याडगी मिर्च शामिल हैं) के साथ धीमी आंच पर मखमली होने तक पकाया जाता है। ऊपर से शुद्ध घी, भुने काजू और कुरकुरी मसाला बूंदी डालकर परोसा जाता है।",
+          "cultural_note": "उत्तर भारतीय मेहमानों के लिए: यह साधारण खिचड़ी से कहीं अधिक मसालेदार, खट्टा-चटपटा और शाही स्वाद वाला व्यंजन है। इसे रायता और कुरकुरी बूंदी के साथ गरमागरम खाएं।",
+          "pronunciation": "बि-सी बे-ले भात"
+        },
+        "mr": {
+          "generic_title": "गरम डाळ आंघोळ (Hot Lentil Bath)",
+          "generic_desc": "मसाले आणि भाज्यांसह गरम डाळ भाताची आंघोळ.",
+          "agent_title": "म्हैसूर बिसी बेळे भात (खमंग खारा बुंदी आणि साजूक तुपासह)",
+          "agent_subtitle": "१८ भाजलेल्या मसाल्यांचा सुगंध, चिंचेचा आंबट-गोडवा आणि साजूक तुपाची फोडणी असलेला कर्नाटकी मसालेभात",
+          "agent_desc": "कन्नडमध्ये 'बिसी बेळे भात' म्हणजे 'गरमागरम डाळ-भात'. तूर डाळ, सोना मसुरी तांदूळ आणि ताज्या भाज्या चिंचेच्या कोळात आणि १८ खास भाजलेल्या मसाल्यांमध्ये (ज्यात 'मराठी मोग्गू' आणि ब्याडगी मिरचीचा समावेश असतो) मऊसूत शिजवल्या जातात. वरून साजूक तुपात तळलेले काजू आणि कुरकुरीत खारा बुंदी घालून सर्व्ह केले जाते.",
+          "cultural_note": "महाराष्ट्रीयन खवय्यांसाठी: आपल्या गोडा मसाल्याच्या मसालेभातापेक्षा हा अधिक रसरशीत (रिसोट्टोसारखा) आणि आंबट-तिखट चवीचा शाही प्रकार आहे.",
+          "pronunciation": "बि-सी बे-ळे भात"
+        },
+        "fr": {
+          "generic_title": "Bain chaud aux lentilles (Bisi Bele Bath)",
+          "generic_desc": "Bain chaud de riz et de lentilles avec des légumes et des épices.",
+          "agent_title": "Bisi Bele Bath de Mysore — Risotto Crémeux de Riz & Lentilles aux 18 Épices",
+          "agent_subtitle": "Cocotte traditionnelle du Karnataka mijotée au tamarin, noix de cajou dorées au ghee et perles croustillantes",
+          "agent_desc": "Ne vous fiez pas au mot 'Bath' (qui signifie 'riz cuisiné' en kannada et non un bain !) : ce plat emblématique de Mysore ressemble à un risotto onctueux où le riz Sona Masoori, les lentilles corail et les légumes du jardin mijotent dans un bouillon acidulé au tamarin et un mélange royal de 18 épices torréfiées (dont les rares bourgeons de kapokier et le piment doux de Byadgi). Relevé de ghee noisette, noix de cajou rôties et billes croustillantes de pois chiches (Kara Boondi).",
+          "cultural_note": "Conseil de dégustation : Dégustez-le bien chaud dès le service pour apprécier le contraste entre le riz fondant et le croquant des perles épicées.",
+          "pronunciation": "Bi-ssi Bé-lé Bat"
+        },
+        "ja": {
+          "generic_title": "温かいレンズ豆のお風呂（ビシ・ベレ・バス）",
+          "generic_desc": "野菜とスパイスが入った温かい米とレンズ豆のお風呂。",
+          "agent_title": "マイソール伝統ビシ・ベレ・バーツ（18種スパイス香る南インド風濃厚豆リゾット）",
+          "agent_subtitle": "タマリンドと芳醇ギーでじっくり煮込んだ米と豆のスパイシー雑炊・カリカリ揚げ玉（ブーンディ）添え",
+          "agent_desc": "名前の中の「Bath（バーツ）」は英語の「お風呂」ではなく、カンナダ語で「炊き込みご飯料理」を意味します。トゥール豆、香り米、季節の野菜をタマリンドの爽やかな酸味と、希少なスパイス「マラティ・モッグ（カポックの蕾）」を含む18種の自家焙煎スパイスでリゾットのようにとろりと煮込んだカルナータカ州の名物料理。仕上げにギーで炒めたカシューナッツとスパイシーな揚げ玉（カラ・ブーンディ）をトッピング。",
+          "cultural_note": "お召し上がり方：上に乗った揚げ玉がサクサクのうちに、熱々の濃厚スパイシーリゾットと混ぜながらお召し上がりください。",
+          "pronunciation": "ビシ・ベレ・バーツ"
+        },
+        "de": {
+          "generic_title": "Heißes Linsenbad mit Gemüse",
+          "generic_desc": "Heißes Bad aus Reis und Linsen mit Gewürzen.",
+          "agent_title": "Mysuru Bisi Bele Bath — Cremiges Südindisches Linsen-Reis-Risotto mit 18 Gewürzen",
+          "agent_subtitle": "Herzhafter Eintopf-Klassiker aus Karnataka mit Tamarinde, Ghee-Cashews und knusprigen Kichererbsenperlen",
+          "agent_desc": "Das Wort 'Bath' stammt aus dem Kannada und bedeutet 'gekochtes Reisgericht' (kein Bad!). Bei diesem königlichen Wohlfühlgericht aus Mysore werden Sona-Masoori-Reis, gelbe Linsen und Gartengemüse mit fruchtiger Tamarinde und einer frisch gerösteten 18-Gewürze-Mischung (mit milden Byadgi-Chilis und Kapokknospen) zu einer sämigen, risottoähnlichen Konsistenz gekocht. Veredelt mit brauner Ghee-Butter, gerösteten Cashews und knusprigem Kara Boondi.",
+          "cultural_note": "Genuss-Tipp: Am besten sofort heiß genießen, solange die gerösteten Kichererbsenperlen auf dem cremigen Reis noch wunderbar knusprig sind.",
+          "pronunciation": "Bi-si Be-le Baht"
+        }
+      }
+    },
+    {
+      "id": "kuzhi-paniyaram-kara-chutney",
+      "name": "Chettinad Kuzhi Paniyaram with Roasted Garlic Kara Chutney",
+      "native_script": "குழி பணியாரம் கார சட்னி",
+      "region": "Tamil Nadu (Chettinad Heritage)",
+      "price_inr": 140,
+      "spice_level": "Medium",
+      "dietary": [
+        "Vegetarian",
+        "Gluten-Free"
+      ],
+      "allergens": [
+        "Mustard Seeds",
+        "Sesame Oil",
+        "Legumes (Urad & Chana Dal)"
+      ],
+      "ingredients": [
+        "Fermented rice & urad dal batter",
+        "Sautéed pearl onions (sambar vengayam)",
+        "Mustard seeds",
+        "Chana dal",
+        "Grated coconut",
+        "Cold-pressed gingelly (sesame) oil",
+        "Roasted tomato-garlic red chili Kara Chutney"
+      ],
+      "cooking_technique": "Fermented batter folded with golden-sautéed shallots, crunchy Bengal gram, curry leaves, and fresh coconut, ladle-baked in a seasoned cast-iron spherical mold ('Kuzhi Paniyaram Kal') with sesame oil until caramelized outside and spongy within.",
+      "how_to_eat": "spear or pick up a warm golden dumpling and dip generously into the smoky red garlic-tomato Kara Chutney and cool coconut chutney.",
+      "generic_trap_reason": "Generic tools translate 'Kuzhi Paniyaram' as 'Pit/Hole Dumplings', completely missing the cast-iron spherical griddle technique (similar to Takoyaki or Aebleskiver) and the caramelized shallot-tempered batter.",
+      "translations": {
+        "hi": {
+          "generic_title": "गड्ढे के पकौड़े मसालेदार चटनी के साथ (Pit Dumplings)",
+          "generic_desc": "गड्ढे वाले पैन में पकाए गए चावल के पकौड़े लाल चटनी के साथ।",
+          "agent_title": "चेट्टिनाड कुझी पनियारम (भुने लहसुन-टमाटर की कारा चटनी के साथ)",
+          "agent_subtitle": "तड़के वाले खमीरी घोल से लोहे के सांचे में सिके सुनहरे, फूले हुए अप्पे — तीखी लाल चटनी के साथ",
+          "agent_desc": "तमिलनाडु के चेट्टिनाड क्षेत्र का बेहद लोकप्रिय टिफ़िन व्यंजन। खमीर उठाए गए चावल-उड़द के घोल में छोटे सांभर प्याज़, चना दाल, राई, कड़ी पत्ता और ताज़े कद्दूकस किए नारियल का तड़का लगाकर इसे खास गोलाकार लोहे के सांचे ('कुझी पनियारम कल') में तिल के तेल के साथ सुनहरा सेका जाता है। बाहर से कुरकुरे और अंदर से स्पंजी ये पनियारम, भुने लहसुन व लाल मिर्च की चटाखेदार 'कारा चटनी' के साथ परोसे जाते हैं।",
+          "cultural_note": "उत्तर भारतीय मेहमानों के लिए: ये दिखने में 'अप्पे/पड्डू' जैसे होते हैं, पर चेट्टिनाड के छोटे प्याज़ और तिल के तेल के तड़के से इनका स्वाद बेहद अनूठा होता है।",
+          "pronunciation": "कु-झी प-नि-या-रम का-रा चट-नी"
+        },
+        "mr": {
+          "generic_title": "खड्ड्याचे डंपलिंग्स तिखट चटणीसह",
+          "generic_desc": "खड्ड्यात भाजलेले तांदळाचे गोळे आणि लाल चटणी.",
+          "agent_title": "चेट्टीनाड कुझी पनियारम (भाजलेल्या लसूण-टोमॅटोच्या खारा चटणीसह)",
+          "agent_subtitle": "कांदा, हरभरा डाळ व ओल्या खोबऱ्याची फोडणी दिलेले अस्सल दाक्षिणात्य आप्पे",
+          "agent_desc": "तामिळनाडूच्या चेट्टीनाड प्रांतातील हा लोकप्रिय पदार्थ म्हणजे आपल्या लाडक्या 'आप्प्यांचा'च अस्सल दाक्षिणात्य भाऊ! आंबवलेल्या तांदूळ-उडीद पिठात छोटे मद्रास कांदे, चणा डाळ, मोहरी, कढीपत्ता आणि ओले खोबरे यांची खमंग फोडणी देऊन बिडाच्या आप्पेपात्रात ('कुझी पनियारम कल') तिळाच्या तेलावर खरपूस भाजले जातात. सोबत भाजलेला लसूण आणि लाल मिरचीची झणझणीत 'खारा चटणी' दिली जाते.",
+          "cultural_note": "महाराष्ट्रीयन खवय्यांसाठी: तिळाच्या तेलावर भाजल्यामुळे या आप्प्यांना एक वेगळाच खमंग सुवास आणि कुरकुरीतपणा येतो.",
+          "pronunciation": "कु-झी प-नि-या-रम खा-रा चट-णी"
+        },
+        "fr": {
+          "generic_title": "Boulettes de fosse avec sauce épicée",
+          "generic_desc": "Boulettes de riz cuites dans des trous avec une sauce pimentée.",
+          "agent_title": "Kuzhi Paniyaram du Chettinad & Chutney Rouge 'Kara' à l'Ail Rôti",
+          "agent_subtitle": "Bouchées dorées et moelleuses de riz fermenté aux échalotes caramélisées, cuites au moule en fonte",
+          "agent_desc": "Spécialité du pays Chettinad au Tamil Nadu, ces bouchées sphériques sont cuites dans un moule alvéolé en fonte ('Kuzhi' désignant les alvéoles, à la manière des poffertjes ou des takoyaki). La pâte de riz et lentilles fermentée est enrichie d'échalotes dorées, de noix de coco fraîche et de feuilles de cari, offrant une croûte caramélisée à l'huile de sésame et un cœur fondant. Accompagné d'un chutney 'Kara' fumé à la tomate et à l'ail rôti.",
+          "cultural_note": "Conseil de dégustation : Alternez entre le chutney rouge relevé à l'ail et le chutney blanc de coco pour équilibrer le piquant.",
+          "pronunciation": "Kou-ji Pa-ni-ya-ram"
+        },
+        "ja": {
+          "generic_title": "穴の団子と辛いチャツネ（クジ・パニヤラム）",
+          "generic_desc": "穴の開いたフライパンで焼いた米の団子と辛いソース。",
+          "agent_title": "チェティナード風クジ・パニヤラム（鉄板たこ焼き型で焼く発酵米の香味ボール）＆焦がしニンニクのカラ・チャツネ",
+          "agent_subtitle": "外は香ばしく中はモチふわ！エシャロットとココナッツが香る南インドの鉄板スナック",
+          "agent_desc": "日本の「たこ焼き器」にそっくりな鋳鉄製の球形プレート（クジ・パニヤラム・カル）で焼き上げる、タミル・ナードゥ州チェティナード地方の人気ティフィン。発酵させた米と豆の生地に、飴色に炒めた小玉ねぎ、チャナ豆、生ココナッツ、カレーリーフを混ぜ、胡麻油で外はカリッと香ばしく、中はモチっと柔らかく焼き上げました。ローストしたニンニクと完熟トマトの旨辛「カラ・チャツネ」とご一緒に。",
+          "cultural_note": "お召し上がり方：見た目はたこ焼きのようですが、発酵生地ならではの爽やかな旨味と香味野菜の食感が楽しめます。2種のチャツネをたっぷりつけてどうぞ。",
+          "pronunciation": "クジ・パニヤラム"
+        },
+        "de": {
+          "generic_title": "Grubenknödel mit scharfem Chutney",
+          "generic_desc": "In Löchern gebackene Reisknödel mit scharfer Sauce.",
+          "agent_title": "Chettinad Kuzhi Paniyaram mit Geröstetem Knoblauch-Kara-Chutney",
+          "agent_subtitle": "In der Gusseisen-Muldenpfanne goldbraun gebackene Reis-Linsen-Bällchen mit Schalotten und Kokos",
+          "agent_desc": "In einer traditionellen gusseisernen Muldenpfanne (ähnlich einer Poffertjes- oder Æbleskiver-Pfanne) mit kaltgepresstem Sesamöl gebackene, herzhafte Teigbällchen aus Tamil Nadu. Der fermentierte Reis-Linsen-Teig wird mit angeschwitzten Schalotten, gerösteten Kichererbsenlinsen, frischer Kokosnuss und Curryblättern verfeinert – außen knusprig karamellisiert, innen herrlich saftig. Dazu servieren wir ein rauchig-pikantes Tomaten-Knoblauch-Chutney ('Kara Chutney').",
+          "cultural_note": "Genuss-Tipp: Dippen Sie die warmen Bällchen zuerst in das würzige rote Kara-Chutney und danach zur Abkühlung in das milde Kokos-Chutney.",
+          "pronunciation": "Ku-schi Pa-ni-ja-ram"
+        }
+      }
+    },
+    {
+      "id": "kumbakonam-degree-filter-kaapi",
+      "name": "Kumbakonam Degree Filter Kaapi",
+      "native_script": "கும்பகோணம் டிகிரி பில்டர் காபி",
+      "region": "Tamil Nadu (Kumbakonam Temple Town Tradition)",
+      "price_inr": 80,
+      "spice_level": "None",
+      "dietary": [
+        "Vegetarian",
+        "Gluten-Free"
+      ],
+      "allergens": [
+        "Milk (Full-Cream Cow's Milk)"
+      ],
+      "ingredients": [
+        "80% Monsooned Arabica & Peaberry coffee beans (Western Ghats)",
+        "20% Roasted Chicory root",
+        "Lactometer-verified pure full-cream cow's milk",
+        "Unrefined cane sugar"
+      ],
+      "cooking_technique": "Thick coffee decoction slow-dripped in a two-chambered brass Indian filter, blended with boiling full-cream 'Degree' milk, and poured back and forth in long arcs ('yard-pulling') between a brass tumbler and saucer-like davara to create a natural velvet froth.",
+      "how_to_eat": "Pour a little coffee from the hot brass tumbler into the wide rimmed davara saucer to cool it slightly, then sip directly from the davara or tumbler through the frothy crest.",
+      "generic_trap_reason": "Generic translators render 'Degree Filter Kaapi' as 'Temperature/Academic Degree Filtered Coffee', completely missing the historical Kumbakonam lactometer purity standard and the brass Davara-Tumbler pouring ritual.",
+      "translations": {
+        "hi": {
+          "generic_title": "कुंभकोणम तापमान/डिग्री फ़िल्टर कॉफ़ी",
+          "generic_desc": "डिग्री दूध के साथ फ़िल्टर की गई गर्म कॉफ़ी।",
+          "agent_title": "कुंभकोणम डिग्री फ़िल्टर कापी (पारंपरिक पीतल दवरा-टम्बलर में)",
+          "agent_subtitle": "पश्चिमी घाट की अरेबिका-पीबेरी कॉफ़ी (80%) व कासनी (20%) का गाढ़ा अर्क और शुद्ध मलाईदार गाय का दूध",
+          "agent_desc": "तमिलनाडु के मंदिर नगर कुंभकोणम की विश्व-प्रसिद्ध कॉफ़ी। यहाँ 'डिग्री' का अर्थ तापमान नहीं, बल्कि लैक्टोमीटर से जाँचे गए 100% शुद्ध व गाढ़े गाय के दूध की पारंपरिक शुद्धता है। पीतल के फ़िल्टर में धीरे-धीरे टपकाए गए कॉफ़ी और चिकोरी के गाढ़े अर्क (डिकॉक्शन) को उबलते दूध के साथ पीतल के 'दवरा' (कटोरी) और 'टम्बलर' (गिलास) के बीच ऊपर से धार बनाकर फेंटा जाता है, जिससे इसमें मखमली झाग और अनूठी खुशबू आती है।",
+          "cultural_note": "पीने की पारंपरिक विधि: गरम कॉफ़ी को थोड़ा ठंडा करने के लिए टम्बलर से चौड़े 'दवरा' में डालें और झाग के साथ चुस्की लें।",
+          "pronunciation": "कुं-भ-को-णम डि-ग्री फ़िल्-टर का-पी"
+        },
+        "mr": {
+          "generic_title": "कुंभकोणम डिग्री फिल्टर कॉफी",
+          "generic_desc": "डिग्री दुधासह गाळलेली गरम कॉफी.",
+          "agent_title": "कुंभकोणम डिग्री फिल्टर कापी (पारंपरिक पितळी दवरा-टम्बलरमध्ये)",
+          "agent_subtitle": "अरेबिका-पीबेरी कॉफी व चिकोरीचा दाट अर्क आणि शुद्ध सायीच्या दुधाची फेसाळ कॉफी",
+          "agent_desc": "तामिळनाडूतील कुंभकोणम शहराची जगप्रसिद्ध कॉफी. येथील 'डिग्री' हा शब्द तापमानासाठी नसून लॅक्टोमीटरने तपासलेल्या १००% शुद्ध, निरशा गाईच्या दुधाच्या गुणवत्तेचे प्रतीक आहे. पितळी फिल्टरमध्ये हळूहळू गाळलेला ८०% कॉफी व २०% चिकोरीचा दाट अर्क उकळत्या दुधात मिसळून, पितळी 'टम्बलर' आणि 'दवरा' (वाटी) मध्ये उंचावरून ओतून फेसाळला जातो.",
+          "cultural_note": "पिण्याची पारंपरिक पद्धत: गरमागरम कॉफी पितळी टम्बलरमधून पसरट 'दवरा' वाटीत ओतून थोडी कोमट करा आणि फेसाळ घोटाचा आस्वाद घ्या.",
+          "pronunciation": "कुं-भ-को-णम डि-ग्री फिल्-टर का-पी"
+        },
+        "fr": {
+          "generic_title": "Café filtré au degré de Kumbakonam",
+          "generic_desc": "Café filtré chaud préparé avec du lait au degré.",
+          "agent_title": "Filter Kaapi 'Degree' de Kumbakonam — Café Indien au Lait Velouté en Laiton",
+          "agent_subtitle": "Décoction lente d'Arabica des Ghâts occidentaux & chicorée (80/20), émulsionnée au lait entier pur",
+          "agent_desc": "Institution du Tamil Nadu, le terme 'Degree' fait référence à la pureté historique du lait entier contrôlée au lactomètre à Kumbakonam. Une décoction intense de grains d'Arabica Peaberry et de chicorée torréfiée (infusée goutte à goutte dans un filtre en laiton) est mariée à du lait entier bouillant, puis étirée de haut entre un gobelet ('Tumbler') et une coupelle ('Davara') en laiton pour créer une mousse naturellement onctueuse.",
+          "cultural_note": "Rituel de service : Versez un peu de café du gobelet dans la coupelle Davara pour le tiédir sans perdre sa mousse aromatique.",
+          "pronunciation": "Koum-ba-ko-nam Di-gri Fil-teur Ka-pi"
+        },
+        "ja": {
+          "generic_title": "クンバコナムの温度フィルターコーヒー",
+          "generic_desc": "度数のついた牛乳で作ったフィルターコーヒー。",
+          "agent_title": "クンバコナム伝統「ディグリー」フィルター・カーピ（真鍮器で泡立てる南インド式ミルクコーヒー）",
+          "agent_subtitle": "西ガーツ山脈産アラビカ豆＆チコリ（80:20）の濃厚抽出液と濃厚純粋ミルクの黄金ブレンド",
+          "agent_desc": "タミル・ナードゥ州の古都クンバコナム発祥の伝統コーヒー。「ディグリー（Degree）」とは温度ではなく、かつて比重計（ラクトメーター）で最高純度を証明された無調整濃厚ミルクの称号です。真鍮製フィルターで一滴ずつ抽出した深煎り豆とチコリの濃厚なデコククションに熱々のミルクを合わせ、真鍮のコップ（タンブラー）と受け皿（ダワラ）の間で高い位置から注ぎ合うことで、きめ細かな泡と豊かな香りを引き出しています。",
+          "cultural_note": "お召し上がり方：熱いタンブラーから浅い受け皿（ダワラ）に少しずつ移して冷ましながら、泡ごとすするようにお楽しみください。",
+          "pronunciation": "クンバコナム・ディグリー・フィルター・カーピ"
+        },
+        "de": {
+          "generic_title": "Kumbakonam Grad-Filterkaffee",
+          "generic_desc": "Gefilterter Kaffee mit Grad-Milch.",
+          "agent_title": "Kumbakonam Degree Filter Kaapi — Traditioneller Südindischer Messingfilter-Kaffee",
+          "agent_subtitle": "Langsam getropfte Arabica-Zichorien-Essenz (80:20), mit reiner Vollmilch von Hand schaumig gezogen",
+          "agent_desc": "In der Tempelstadt Kumbakonam steht 'Degree' nicht für Temperatur, sondern historisch für per Laktometer geprüfte, unverfälschte Vollmilch höchster Güte. Ein kräftiger Sud aus südindischen Peaberry-Arabicabohnen und 20 % gerösteter Zichorienwurzel wird im Messingfilter langsam aufgebrüht, mit heißer Vollmilch vermählt und im hohen Bogen zwischen Messingbecher ('Tumbler') und Schale ('Davara') hin- und hergegossen, bis eine samtige Crema entsteht.",
+          "cultural_note": "Trinkritual: Gießen Sie etwas Kaffee aus dem heißen Becher in die flache Davara-Schale, um ihn leicht abzukühlen, ohne den feinen Schaum zu verlieren.",
+          "pronunciation": "Kum-ba-ko-nam Di-grie Fil-ter Kah-pi"
+        }
+      }
+    },
+    {
+      "id": "chettinad-milagu-rasam",
+      "name": "Chettinad Milagu (Black Pepper) Rasam",
+      "native_script": "செட்டிநாடு மிளகு ரசம்",
+      "region": "Tamil Nadu (Chettinad Spice Route)",
+      "price_inr": 110,
+      "spice_level": "Medium-High (Peppery Warmth)",
+      "dietary": [
+        "Vegetarian",
+        "Vegan",
+        "Gluten-Free"
+      ],
+      "allergens": [
+        "Mustard Seeds"
+      ],
+      "ingredients": [
+        "Sun-ripened country tomatoes",
+        "Aged tamarind extract",
+        "Freshly crushed Tellicherry black peppercorns",
+        "Roasted cumin seeds",
+        "Crushed garlic cloves",
+        "Curry leaves",
+        "Coriander stems",
+        "Toor dal water"
+      ],
+      "cooking_technique": "Clear, restorative Tamil broth simmered with tangy tamarind, crushed vine tomatoes, and a mortar-pounded spice paste of Tellicherry black pepper, cumin, and garlic, taken off the flame just as a frothy crown forms so the volatile aromatics stay vibrant.",
+      "how_to_eat": "Sip warm from a bowl like a restorative consommé/aperitif, or pour generously over fluffy steamed rice with a dab of ghee and crispy papadum (appalam).",
+      "generic_trap_reason": "Generic translators translate 'Milagu Rasam' as 'Pepper Juice', which sounds like raw liquid chili extract rather than a delicate, aromatic South Indian digestive consommé (the historical origin of 'Mulligatawny' soup!).",
+      "translations": {
+        "hi": {
+          "generic_title": "चेट्टिनाड काली मिर्च का रस (Pepper Juice)",
+          "generic_desc": "काली मिर्च और इमली से बना मसालेदार रस।",
+          "agent_title": "चेट्टिनाड मिलगु (काली मिर्च-जीरा) रसम",
+          "agent_subtitle": "ताज़ी कुटी मालाबार काली मिर्च, लहसुन, जीरा और इमली से बना पाचक व गर्माहट भरा दक्षिण भारतीय सूप",
+          "agent_desc": "तमिल भाषा में 'मिलगु रसम' (जिससे अंग्रेज़ी शब्द 'मुलिगाटॉनी सूप' बना है) केवल रस नहीं, बल्कि औषधीय गुणों से भरपूर एक पारंपरिक पाचक सूप है। पके देसी टमाटर, इमली के अर्क और अरहर दाल के पानी में खरल में ताज़ी कुटी काली मिर्च, भुना जीरा, लहसुन, हरा धनिया डंठल और कड़ी पत्ते का बघार लगाकर इसे केवल एक झागदार उबाल आने तक पकाया जाता है ताकि मसालों की ताज़ी महक बरकरार रहे।",
+          "cultural_note": "परोसने का सुझाव: इसे सूप की तरह गरमागरम पिएं या भाप निकलते सादे चावल और कुरकुरे पापड़ (अप्पलम) के साथ खाएं — यह गले और पाचन के लिए बेहद आरामदायक है।",
+          "pronunciation": "चेट्टि-नाड मि-ल-गु र-सम"
+        },
+        "mr": {
+          "generic_title": "चेट्टीनाड काळी मिरी रस",
+          "generic_desc": "काळी मिरी आणि चिंचेचा तिखट रस.",
+          "agent_title": "चेट्टीनाड मिलगू (काळी मिरी-जिरे) रसम",
+          "agent_subtitle": "ताजी कुटलेली काळी मिरी, लसूण, जिरे आणि चिंचेचा पाचक व सुवासिक दाक्षिणात्य सार (सूप)",
+          "agent_desc": "तामिळमध्ये 'मिलगू रसम' म्हणजे ताज्या कुटलेल्या काळ्या मिरीचा सुवासिक सार. पिकलेले गावरान टोमॅटो, चिंचेचा कोळ आणि तुरीच्या डाळीच्या पाण्यात खलबत्त्यात ठेचलेली काळी मिरी, भाजलेले जिरे, लसूण आणि कोथिंबिरीच्या काड्या घालून फोडणी दिली जाते. मसाल्यांचा नैसर्गिक सुगंध टिकवून ठेवण्यासाठी याला फक्त एक फेसाळ उकळी आल्यावर लगेच खाली उतरवले जाते.",
+          "cultural_note": "खाण्याची पद्धत: आपल्या कोकणी सोलकढी किंवा टोमॅटोच्या साराप्रमाणे हा रसम जेवणाआधी सूप म्हणून प्या किंवा गरमागरम भात आणि उडदाच्या पापडासोबत (अप्पलम) आस्वाद घ्या.",
+          "pronunciation": "चेट्टी-नाड मि-ल-गू र-सम"
+        },
+        "fr": {
+          "generic_title": "Jus de poivre noir du Chettinad",
+          "generic_desc": "Jus épicé préparé avec du poivre noir et du tamarin.",
+          "agent_title": "Milagu Rasam du Chettinad — Consommé Aromatique au Poivre Noir de Tellicherry & Tamarin",
+          "agent_subtitle": "Bouillon digestif clair aux tomates mûres, cumin torréfié, ail écrasé et feuilles de cari fraîches",
+          "agent_desc": "Ancêtre historique de la célèbre soupe 'Mulligatawny' (du tamoul 'Milagu Thanni', eau poivrée), ce consommé traditionnel du Tamil Nadu allie la fraîcheur acidulée du tamarin et de la tomate à la chaleur parfumée du poivre noir de Tellicherry fraîchement concassé au mortier avec du cumin, de l'ail et des tiges de coriandre. Retiré du feu dès la première écume pour préserver toutes ses huiles essentielles.",
+          "cultural_note": "Conseil de dégustation : Se déguste en tasse comme un bouillon vivifiant en ouverture de repas, ou versé sur un bol de riz blanc vapeur.",
+          "pronunciation": "Mi-la-gou Ra-sam"
+        },
+        "ja": {
+          "generic_title": "チェティナードの黒コショウジュース（ミラグ・ラッサム）",
+          "generic_desc": "黒コショウとタマリンドで作った辛いジュース。",
+          "agent_title": "チェティナード伝統ミラグ・ラッサム（挽きたて黒胡椒とタマリンドの薬膳風クリアスープ）",
+          "agent_subtitle": "完熟トマトの酸味に粗挽き黒胡椒・クミン・ニンニクが爽やかに香る南インドの伝統スープ",
+          "agent_desc": "英語のスープ名「マリガトーニ（Mulligatawny）」の語源となったタミル伝統の薬膳風コンソメスープ。タマリンドと完熟トマトの爽やかな酸味が効いた澄んだスープに、石臼で粗く潰した香り高い黒胡椒（ミラグ）、クミン、ニンニク、コリアンダーの茎、カレーリーフを合わせ、香りが飛ばないよう沸騰直前の泡立ちで火を止めて仕上げます。身体が芯から温まり、消化を助ける一杯です。",
+          "cultural_note": "お召し上がり方：そのままカップでスープとして飲むほか、温かい白ご飯にたっぷりかけてお茶漬けのように召し上がるのも本場流です。",
+          "pronunciation": "ミラグ・ラッサム"
+        },
+        "de": {
+          "generic_title": "Chettinad Schwarzer Pfeffersaft",
+          "generic_desc": "Scharfer Saft aus schwarzem Pfeffer und Tamarinde.",
+          "agent_title": "Chettinad Milagu Rasam — Klare Tamarinden-Kraftbrühe mit Tellicherry-Pfeffer",
+          "agent_subtitle": "Wärmende südindische Gewürz-Consommé mit sonnengereiften Tomaten, Kreuzkümmel, Knoblauch und Curryblättern",
+          "agent_desc": "Der historische Ursprung der bekannten 'Mulligatawny'-Suppe (aus dem Tamilischen 'Milagu Thanni' für Pfefferwasser): Diese klare, wohltuende Brühe aus Tamil Nadu vereint die fruchtige Säure von Tamarinde und reifen Tomaten mit im Mörser frisch zerstoßenem Tellicherry-Pfeffer, geröstetem Kreuzkümmel, Knoblauch und Korianderstängeln. Kurz vor dem Aufkochen vom Feuer genommen, damit das volle ätherische Gewürzaroma erhalten bleibt.",
+          "cultural_note": "Genuss-Tipp: Trinken Sie den Rasam pur aus der Schale als wärmenden Aperitif oder gießen Sie ihn über gedämpften Reis mit knusprigem Linsen-Papadum.",
+          "pronunciation": "Mi-la-gu Ra-sam"
+        }
+      }
+    },
+    {
+      "id": "mla-pesarattu-upma",
+      "name": "Andhra MLA Pesarattu (Green Gram Crepe with Ginger Upma & Allam Pachadi)",
+      "native_script": "ఎమ్మెల్యే పెసరట్టు ఉప్మా & అల్లం పచ్చడి",
+      "region": "Andhra Pradesh & Telangana (Coastal & Hyderabad Tiffin)",
+      "price_inr": 170,
+      "spice_level": "Medium-High",
+      "dietary": [
+        "Vegetarian"
+      ],
+      "allergens": [
+        "Gluten (Semolina/Rava in Upma)",
+        "Dairy (Ghee)",
+        "Mustard Seeds"
+      ],
+      "ingredients": [
+        "Whole sprouted green moong dal",
+        "Fresh ginger & green chilies",
+        "Cumin seeds",
+        "Chopped red onions",
+        "Roasted semolina (rava) upma",
+        "Allam Pachadi (fiery ginger-tamarind-jaggery chutney)"
+      ],
+      "cooking_technique": "Unfermented batter ground fresh from soaked whole green gram (moong dal) with raw ginger and green chilies, griddled crisp with cumin and finely diced onions, filled with warm cashew-tempered semolina upma, and paired with Andhra's signature ginger-jaggery-tamarind Allam Pachadi.",
+      "how_to_eat": "Cut through both the crisp green moong crepe and the warm savory upma inside, and swipe each bite through the sweet-hot ginger Allam Pachadi.",
+      "generic_trap_reason": "Generic translators render 'MLA Pesarattu' literally as 'Member of Legislative Assembly Green Bean Pancake', baffling customers instead of explaining the iconic Andhra canteen dish stuffed with savory semolina Upma.",
+      "translations": {
+        "hi": {
+          "generic_title": "विधायक (MLA) हरे चने का पैनकेक उपमा के साथ",
+          "generic_desc": "विधानसभा सदस्य का हरा पैनकेक सूजी के साथ।",
+          "agent_title": "आंध्र स्पेशल 'एमएलए' पेसरट्टू (अदरक-सूजी उपमा और अल्लम पच्चड़ी के साथ)",
+          "agent_subtitle": "साबुत हरी मूंग दाल का कुरकुरा चीला/डोसा, अंदर गरमागरम काजू उपमा और अदरक-इमली की चटपटी चटनी",
+          "agent_desc": "आंध्र प्रदेश विधानसभा की कैंटीन से मशहूर हुआ यह भारी और पौष्टिक नाश्ता! बिना खमीर उठाए साबुत हरी मूंग दाल, अदरक और हरी मिर्च को पीसकर तवे पर जीरा और बारीक प्याज़ के साथ कुरकुरा सेका जाता है। इसके अंदर गरमागरम भुनी सूजी का उपमा भरा जाता है और साथ में भुने अदरक, गुड़ व इमली की तीखी-मीठी 'अल्लम पच्चड़ी' परोसी जाती है।",
+          "cultural_note": "उत्तर भारतीय मेहमानों के लिए: यह मूंग दाल चीले का दक्षिण भारतीय रूप है, पर अदरक-इमली की 'अल्लम चटनी' और उपमा की स्टफिंग इसे बिल्कुल अनूठा बनाती है।",
+          "pronunciation": "एम-एल-ए पे-स-र-ट्टू उप-मा"
+        },
+        "mr": {
+          "generic_title": "आमदार (MLA) हिरव्या मुगाचा पॅनकेक उपम्यासह",
+          "generic_desc": "आमदारांचा हिरवा पॅनकेक आणि रवा उपमा.",
+          "agent_title": "आंध्र स्पेशल 'एमएलए' पेसरट्टू (रवा उपमा स्टफिंग आणि आल्याची 'अल्लम पच्चडी')",
+          "agent_subtitle": "अख्ख्या हिरव्या मुगाचा कुरकुरीत डोसा, आत मऊसूत उपमा आणि आले-चिंच-गुळाची झणझणीत चटणी",
+          "agent_desc": "हैदराबादच्या आमदार निवासातील कॅन्टीनवरून 'एमएलए पेसरट्टू' हे नाव पडलेला आंध्र प्रदेशातील अत्यंत लोकप्रिय आणि प्रथिनयुक्त (प्रोटीनयुक्त) पदार्थ. न आंबवता अख्खे हिरवे मूग, आले आणि हिरवी मिरची वाटून, त्यावर कांदा व जिरे पसरवून कुरकुरीत डोसा भाजला जातो. आत गरमागरम रवा उपमा भरून सोबत आले, चिंच आणि गुळाची आंबट-गोड-तिखट 'अल्लम पच्चडी' दिली जाते.",
+          "cultural_note": "महाराष्ट्रीयन खवय्यांसाठी: मुगाच्या धिरड्यासारखा पौष्टिक पण अधिक कुरकुरीत आणि आल्याच्या चटणीमुळे अत्यंत चविष्ट असा हा प्रकार आहे.",
+          "pronunciation": "पे-स-र-ट्टू उप-मा"
+        },
+        "fr": {
+          "generic_title": "Crêpe de député (MLA) aux haricots verts",
+          "generic_desc": "Crêpe verte de membre du parlement farcie à la semoule.",
+          "agent_title": "MLA Pesarattu d'Andhra — Galette Croquante de Haricots Mungo Verts, Upma & Chutney de Gingembre",
+          "agent_subtitle": "Crêpe protéinée non fermentée aux haricots mungo entiers, garnie de semoule dorée et condiment 'Allam Pachadi'",
+          "agent_desc": "Surnommé 'MLA' en clin d'œil à la cantine parlementaire d'Hyderabad qui l'a rendu célèbre, le Pesarattu est une galette rustique et riche en protéines, préparée sans fermentation à partir de haricots mungo verts entiers broyés avec du gingembre frais et du cumin. Gratinée aux oignons rouges sur la plaque, elle est généreusement garnie d'Upma (semoule fine torréfiée aux noix de cajou) et servie avec l'Allam Pachadi, un chutney vibrant au gingembre rôti, tamarin et sucre de palme.",
+          "cultural_note": "Conseil de dégustation : Le mariage entre le croquant herbacé du haricot mungo et le punch sucré-épicé du chutney au gingembre est la signature de la cuisine d'Andhra.",
+          "pronunciation": "Pé-sa-ra-tou Oup-ma"
+        },
+        "ja": {
+          "generic_title": "国会議員（MLA）の緑豆パンケーキ",
+          "generic_desc": "議員向けの緑の豆のパンケーキとセモリナ粉。",
+          "agent_title": "アーンドラ名物「MLAペサラットゥ」（緑豆の香ばしクレープ・生姜ウプマ包み＆生姜タマリンドチャツネ）",
+          "agent_subtitle": "無発酵の丸ごと緑豆（ムング豆）生地に温かいセモリナ粉ウプマを包んだ高タンパクなご当地ティフィン",
+          "agent_desc": "ハイデラバードの州議会議員（MLA）食堂で愛されたことからその名がついた、アーンドラ・プラデーシュ州の看板料理。発酵させずに丸ごとの緑豆（ムングダル）を生姜・青唐辛子と挽いた生地に、クミンと刻み玉ねぎを散らして香ばしく焼き上げ、中にカシューナッツ入りの温かいセモリナ粉ソテー（ウプマ）を包みました。焦がし生姜と黒糖・タマリンドの甘辛チャツネ「アッラム・パチャディ」を添えて。",
+          "cultural_note": "お召し上がり方：豆の滋味あふれる香ばしいクレープに、生姜がピリッと効いた甘酸っぱいアッラム・チャツネをたっぷり絡めてお召し上がりください。",
+          "pronunciation": "ペサラットゥ・ウプマ"
+        },
+        "de": {
+          "generic_title": "Abgeordneten-Pfannkuchen aus grünen Bohnen (MLA Pesarattu)",
+          "generic_desc": "Grüner Pfannkuchen des Parlamentsmitglieds mit Grießfüllung.",
+          "agent_title": "Andhra MLA Pesarattu — Knuspriger Mungbohnen-Crêpe mit Grieß-Upma & Ingwer-Chutney",
+          "agent_subtitle": "Proteinreicher, unfermentierter Crêpe aus ganzen grünen Mungbohnen, gefüllt mit herzhaftem Rava-Upma",
+          "agent_desc": "Benannt nach der Parlamentskantine ('MLA') in Hyderabad, in der diese Kombination Kultstatus erlangte: Für Pesarattu werden ganze grüne Mungbohnen ohne Fermentation frisch mit Ingwer und grünen Chilis vermahlen und mit Kreuzkümmel sowie roten Zwiebeln knusprig ausgebacken. Gefüllt mit warmem, nussigem Hartweizengrieß-Upma und serviert mit 'Allam Pachadi' – einem feurig-süßsauren Chutney aus geröstetem Ingwer, Tamarinde und Jaggery.",
+          "cultural_note": "Genuss-Tipp: Bestreichen Sie jeden Bissen großzügig mit dem würzigen Ingwer-Tamarinden-Chutney (Allam Pachadi).",
+          "pronunciation": "Pe-sa-ra-tu Up-ma"
+        }
+      }
+    },
+    {
+      "id": "malabar-parotta-veg-kurma",
+      "name": "Malabar Veechu Parotta with Nilgiri Vegetable Kurma",
+      "native_script": "മലബാർ പൊറോട്ട & വെജിറ്റബിൾ കുറുമ",
+      "region": "Kerala & Tamil Nadu Border (Malabar Coast)",
+      "price_inr": 165,
+      "spice_level": "Mild-Medium",
+      "dietary": [
+        "Vegetarian"
+      ],
+      "allergens": [
+        "Gluten (Wheat Flour)",
+        "Dairy (Milk/Ghee)",
+        "Tree Nuts (Cashew paste in Kurma)"
+      ],
+      "ingredients": [
+        "Fine wheat flour stretched into paper-thin ribbons",
+        "Ghee & coconut oil",
+        "Freshly grated Malabar coconut",
+        "Roasted fennel seeds (saunf)",
+        "Cashew & poppy seed paste",
+        "Green cardamom & cloves",
+        "Seasonal highland vegetables"
+      ],
+      "cooking_technique": "Dough rested in oil, swung through the air ('veechu') until translucent, pleated into concentric spirals, and griddled on a heavy iron plate before being clapped between both hands ('kothu/clap') to release dozens of flaky pastry layers; served with velvety coconut-fennel-cashew vegetable kurma.",
+      "how_to_eat": "Pull apart a ribbon-like flaky layer of warm parotta and use it to scoop up the creamy, fennel-scented coconut vegetable kurma.",
+      "generic_trap_reason": "Generic translators flatten 'Malabar Veechu Parotta with Kurma' to 'Flatbread with Vegetable Curry', losing the theatrical hand-thrown ribbon-pastry lamination and the creamy Kerala coconut-fennel gravy.",
+      "translations": {
+        "hi": {
+          "generic_title": "मालाबार फ्लैटब्रेड सब्जी करी के साथ",
+          "generic_desc": "सब्जी की ग्रेवी के साथ मैदे की चपटी रोटी।",
+          "agent_title": "मालाबार लच्छा 'वीचू' परोटा और नीलगिरी वेजिटेबल कुरमा",
+          "agent_subtitle": "हाथों से फेंटकर बनाया गया दर्जनों परतों वाला खस्ता केरल परोटा, नारियल-सौंफ-काजू के मखमली कुरमे के साथ",
+          "agent_desc": "केरल के मालाबार तट की खासियत! आटे को हवा में घुमाकर ('वीचू' तकनीक) कागज़ जितना पतला फैलाया जाता है और फिर लपेटकर तवे पर सुनहरा सेका जाता है। परोसने से ठीक पहले इसे दोनों हाथों से थपकी देकर फुलाया जाता है जिससे इसकी अनगिनत लच्छेदार परतें खुल जाती हैं। साथ में ताज़े नारियल, भुनी सौंफ, खसखस, काजू और खड़े मसालों में पकी सुगंधित 'वेजिटेबल कुरमा' ग्रेवी परोसी जाती है।",
+          "cultural_note": "उत्तर भारतीय मेहमानों के लिए: यह उत्तर भारतीय लच्छा पराठे से कहीं अधिक नरम और पेस्ट्री जैसा परतदार होता है, और इसका नारियल-सौंफ वाला सफेद-हरा कुरमा बेहद मलाईदार होता है।",
+          "pronunciation": "मा-ला-बार वी-चू प-रो-टा कुर-मा"
+        },
+        "mr": {
+          "generic_title": "मालाबार सपाट पोळी आणि भाजी करी",
+          "generic_desc": "भाजीच्या रश्श्यासोबत मैद्याची पोळी.",
+          "agent_title": "मालाबार लच्छेदार 'वीचू' परोटा आणि निलगिरी व्हेज कुरमा",
+          "agent_subtitle": "हवेत फिरवून तयार केलेल्या अनेक पापुद्र्यांचा खुसखुशीत केरळी परोटा आणि ओल्या खोबऱ्याचा मलाईदार कुरमा",
+          "agent_desc": "केरळच्या मालाबार किनाऱ्यावरील प्रसिद्ध 'वीचू परोटा'. पीठ हवेत फिरवून अत्यंत पातळ ताणले जाते आणि त्याच्या घड्या घालून तव्यावर खरपूस भाजले जाते. सर्व्ह करण्यापूर्वी दोन्ही हातांनी बाजूने थोपटून त्याचे मऊ, खुसखुशीत पापुद्रे (लेयर्स) मोकळे केले जातात. सोबत ताजे ओले खोबरे, बडीशेप, काजू, खसखस आणि हिरव्या मसाल्यांचे वाटण असलेल्या मखमली व्हेज कुरम्याची जोडी दिली जाते.",
+          "cultural_note": "महाराष्ट्रीयन खवय्यांसाठी: या परोट्याचे पापुद्रे खारी बिस्किटासारखे सुट्टे तरीही मऊसूत असतात आणि खोबरे-बडीशेपच्या कुरम्यासोबत अप्रतिम लागतात.",
+          "pronunciation": "मा-ला-बार प-रो-टा कुर-मा"
+        },
+        "fr": {
+          "generic_title": "Pain plat de Malabar avec curry de légumes",
+          "generic_desc": "Pain plat indien servi avec une sauce aux légumes.",
+          "agent_title": "Parotta Feuilleté de Malabar ('Veechu') & Kurma Velouté de Légumes au Coco et Fenouil",
+          "agent_subtitle": "Pain-pâtisserie étiré à la volée aux multiples couches crousti-fondantes, sauce crémeuse noix de cajou & cardamome",
+          "agent_desc": "Véritable tour de main des maîtres boulangers du Kerala : la pâte est lancée et étirée dans les airs ('Veechu') jusqu'à devenir translucide, pliée en rubans concentriques puis dorée à la plancha avant d'être frappée entre les mains pour séparer des dizaines de feuillets aériens, entre le croissant et le pain plat. Servi avec un Kurma des collines Nilgiri — un velouté doux de légumes mijotés au lait de coco frais, graines de fenouil torréfiées et noix de cajou.",
+          "cultural_note": "Conseil de dégustation : Détachez les rubans feuilletés du bout des doigts pour napper généreusement chaque bouchée de sauce Kurma au coco.",
+          "pronunciation": "Ma-la-bar Pa-ro-ta Kour-ma"
+        },
+        "ja": {
+          "generic_title": "マラバールのフラットブレッドと野菜カレー",
+          "generic_desc": "野菜のカレーソースを添えた平焼きパン。",
+          "agent_title": "マラバール伝統手延べパイ風パロタ（ヴィーチュ・パロタ）＆ココナッツとフェンネル香る野菜クルマ",
+          "agent_subtitle": "職人が空中で薄く伸ばして幾重にも折り重ねたサクふわ層状パンと、カシュー＆ココナッツの白緑シチュー",
+          "agent_desc": "ケーララ州マラバール海岸の名物パン。生地を空中で巧みに振り回して（ヴィーチュ技法）透けるほど薄く伸ばし、渦巻き状に折り畳んで鉄板で焼き上げた後、両手でパンッと叩いて空気を含ませることで、クロワッサンのように幾重ものふんわりサクサクの層を立ち上げます。挽きたての生ココナッツ、フェンネルシード、カシューナッツで仕立てた優しい味わいの南インド風野菜シチュー「クルマ」に浸してどうぞ。",
+          "cultural_note": "お召し上がり方：リボン状にほぐれる温かいパロタの層を指でちぎり、クリーミーなココナッツクルマをたっぷり絡めてお召し上がりください。",
+          "pronunciation": "マラバール・パロタ＆クルマ"
+        },
+        "de": {
+          "generic_title": "Malabar-Fladenbrot mit Gemüsecurry",
+          "generic_desc": "Flaches Brot serviert mit einer Gemüsesauce.",
+          "agent_title": "Malabar Veechu Parotta — Handgezogenes Blätterteig-Fladenbrot mit Kokos-Fenchel-Kurma",
+          "agent_subtitle": "In Dutzende zarte Schichten aufgeklapptes Kerala-Pfannenbrot mit cremigem Cashew-Kokos-Gemüseragout",
+          "agent_desc": "Ein Meisterstück der Straßenküche Keralas: Der Teig wird kunstvoll durch die Luft geschwungen ('Veechu'), bis er hauchdünn ist, zu einer Spirale gefaltet, auf der Eisenplatte goldbraun gebacken und anschließend zwischen den Händen aufgeklatscht, sodass Dutzende blättrig-weiche Teigbänder entstehen. Dazu reichen wir ein mild-aromatisches Nilgiri-Gemüse-Kurma mit frisch geriebener Kokosnuss, geröstetem Fenchelsamen, grünem Kardamom und Cashewcreme.",
+          "cultural_note": "Genuss-Tipp:Zupfen Sie die warmen, blättrigen Teigstreifen einzeln ab und tunken Sie sie tief in die samtige Kokos-Kurma-Sauce.",
+          "pronunciation": "Ma-la-bar Pa-ro-ta Kur-ma"
+        }
+      }
+    }
+  ]
+}
