@@ -5,25 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DakshinVani — Gemma South Indian Menu Translator Agent</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    /* Theme: white, black & blue.
+       Existing utility classes keep their names but now resolve to the new palette:
+       emerald -> primary blue, amber/orange/rose -> light accent blue, stone -> neutral black/white scale. */
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            emerald: { 50:'#EFF4FF',100:'#DCE7FE',200:'#BFD3FD',300:'#93B4FB',400:'#5E8BF5',500:'#3A66EA',600:'#2548D4',700:'#1D39AB',800:'#1B3187',900:'#162768',950:'#0C1640' },
+            amber:   { 50:'#F0F8FF',100:'#E0F0FF',200:'#BCE0FE',300:'#86C8FC',400:'#4AAAF7',500:'#2189E8',600:'#136DC8',700:'#1257A1',800:'#144A85',900:'#153F6E',950:'#0B2748' },
+            orange:  { 50:'#F0F8FF',100:'#E0F0FF',200:'#BCE0FE',300:'#86C8FC',400:'#4AAAF7',500:'#2189E8',600:'#136DC8',700:'#1257A1',800:'#144A85',900:'#153F6E',950:'#0B2748' },
+            rose:    { 50:'#EFF4FF',100:'#DCE7FE',200:'#BFD3FD',300:'#93B4FB',400:'#5E8BF5',500:'#3A66EA',600:'#2548D4',700:'#1D39AB',800:'#1B3187',900:'#162768',950:'#0C1640' },
+            stone:   { 50:'#FAFAFA',100:'#F3F4F6',200:'#E5E7EB',300:'#D1D5DB',400:'#9CA3AF',500:'#6B7280',600:'#4B5563',700:'#2F343D',800:'#1B1F26',900:'#0F1217',950:'#07090C' }
+          }
+        }
+      }
+    };
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', 'Noto Sans Devanagari', 'Noto Sans JP', sans-serif;
-      background-color: #FAF6F0;
-      color: #1F1A17;
+      background-color: #FFFFFF;
+      color: #0F1217;
     }
     .banana-leaf-gradient {
-      background: linear-gradient(135deg, #143621 0%, #1F4E30 55%, #2B663E 100%);
+      background: linear-gradient(135deg, #07090C 0%, #0C1640 50%, #1D39AB 100%);
     }
     .brass-border {
-      border-color: #D49B35;
+      border-color: #4AAAF7;
     }
     .brass-badge {
-      background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
-      color: #78350F;
-      border: 1px solid #F59E0B;
+      background: linear-gradient(135deg, #E0F0FF 0%, #BCE0FE 100%);
+      color: #0B2748;
+      border: 1px solid #2189E8;
     }
     @media print {
       .no-print { display: none !important; }
